@@ -54,7 +54,12 @@ const signup: SignupHandlers['signup'] = async ({
   }
 
   // Login the customer right after creating it
-  await login({ variables: { email, password }, res, config })
+  try {
+    await login({ variables: { email, password }, res, config })
+  } catch(error) {
+    console.error('error login', error)
+    throw error
+  }
 
   res.status(200).json({ data: null })
 }
