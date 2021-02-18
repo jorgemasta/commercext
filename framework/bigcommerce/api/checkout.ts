@@ -5,10 +5,11 @@ import createApiHandler, {
 import { BigcommerceApiError } from './utils/errors'
 
 const METHODS = ['GET']
-const fullCheckout = true
+const fullCheckout = false
 
 // TODO: a complete implementation should have schema validation for `req.body`
 const checkoutApi: BigcommerceApiHandler<any> = async (req, res, config) => {
+  //console.log('req', req)
   if (!isAllowedMethod(req, res, METHODS)) return
 
   const { cookies } = req
@@ -20,12 +21,20 @@ const checkoutApi: BigcommerceApiHandler<any> = async (req, res, config) => {
       return
     }
 
+    console.log('cartId', cartId)
     const { data } = await config.storeApiFetch(
       `/v3/carts/${cartId}/redirect_urls`,
       {
         method: 'POST',
       }
     )
+
+    console.log('data', data)
+
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(data);
+    return
+
 
     if (fullCheckout) {
       res.redirect(data.checkout_url)
