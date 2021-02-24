@@ -33,7 +33,7 @@ Next.js Commerce integrates out-of-the-box with BigCommerce. We plan to support 
 * **Next.js Commerce** should have a completely data **agnostic** UI
 * **Aware of schema**: should ship with the right data schemas and types.
 * All providers should return the right data types and schemas to blend correctly with Next.js Commerce.
-* `@framework` will be the alias utilized in commerce and it will map to the ecommerce provider of preference- e.g BigCommerce, Shopify, Swell. All providers should expose the same standardized functions. _Note that the same applies for recipes using a CMS + an ecommerce provider._
+* `@bigcommerce/storefront-data-hooks` will be the alias utilized in commerce and it will map to the ecommerce provider of preference- e.g BigCommerce, Shopify, Swell. All providers should expose the same standardized functions. _Note that the same applies for recipes using a CMS + an ecommerce provider._
 
 There is a `framework` folder in the root folder that will contain multiple ecommerce providers.
 

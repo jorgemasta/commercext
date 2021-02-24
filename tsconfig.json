@@ -22,8 +22,8 @@
       "@utils/*": ["utils/*"],
       "@commerce/*": ["framework/commerce/*"],
       "@commerce": ["framework/commerce"],
-      "@framework/*": ["framework/bigcommerce/*"],
-      "@framework": ["framework/bigcommerce"]
+      "@bigcommerce/storefront-data-hooks/*": ["framework/bigcommerce/*"],
+      "@bigcommerce/storefront-data-hooks": ["framework/bigcommerce"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"],

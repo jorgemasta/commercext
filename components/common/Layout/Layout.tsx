@@ -10,8 +10,8 @@ import { Sidebar, Button, Modal, LoadingDots } from '@components/ui'
 import { CartSidebarView } from '@components/cart'
 
 import LoginView from '@components/auth/LoginView'
-import { CommerceProvider } from '@framework'
-import type { Page } from '@framework/api/operations/get-all-pages'
+import { CommerceProvider } from '@bigcommerce/storefront-data-hooks'
+import type { Page } from '@bigcommerce/storefront-data-hooks/api/operations/get-all-pages'
 
 
 const Loading = () => (

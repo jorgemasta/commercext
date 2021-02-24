@@ -1,10 +1,10 @@
 import * as React from 'react';
 import type { GetStaticPropsContext } from 'next'
 import dynamic from 'next/dynamic';
-import { getConfig } from '@framework/api'
-import getAllPages from '@framework/api/operations/get-all-pages'
+import { getConfig } from '@bigcommerce/storefront-data-hooks/api'
+import getAllPages from '@bigcommerce/storefront-data-hooks/api/operations/get-all-pages'
 import { embedCheckout } from '@bigcommerce/checkout-sdk';
-import useCart from '@framework/cart/use-cart'
+import useCart from '@bigcommerce/storefront-data-hooks/cart/use-cart'
 import {nanoid} from 'nanoid';
 
 import { Layout } from '@components/common'
